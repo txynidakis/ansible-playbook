@@ -10,3 +10,7 @@
   - name: Upgrade all packages
     community.general.homebrew:
       upgrade_all: yes
+
+  - name: Brew Cleanup
+    ansible.builtin.command: "/usr/local/bin/brew cleanup"
+    changed_when: False
